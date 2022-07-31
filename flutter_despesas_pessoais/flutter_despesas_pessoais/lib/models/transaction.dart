@@ -9,7 +9,6 @@ class Transaction {
   required this.value,
   required this.title,
   required this.date,
-
 });
 
 }

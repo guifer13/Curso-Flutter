@@ -21,7 +21,13 @@ class ExpensesApp extends StatelessWidget {
         ).copyWith(
           secondary: Colors.amber,
         ),
-      ),
+        fontFamily: 'Quicksand',
+        appBarTheme: AppBarTheme(
+          textTheme: const TextTheme(
+            titleMedium: TextStyle( fontFamily: 'OpenSans', fontSize: 20, fontWeight: FontWeight.bold,)
+          ),
+        )
+      )
     );
   }
 }
@@ -34,11 +40,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _transations = [
-    Transaction(
-        id: "t1", value: 310, title: "Tênis Novo", date: DateTime.now()),
-    Transaction(
-        id: "t2", value: 202, title: "Conta de água", date: DateTime.now()),
+  final List<Transaction> _transations = [
+    //Transaction(
+    //    id: "t1", value: 310, title: "Tênis Novo", date: DateTime.now()),
+    //Transaction(
+    //    id: "t2", value: 202, title: "Conta de água", date: DateTime.now()),
   ];
 
   _addtransaction(String title, double value) {
